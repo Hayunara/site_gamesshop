@@ -46,8 +46,54 @@ section .container {
     justify-content: space-between;
 }
 
+.menu li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 8px;
+}
+
+.menu li a{
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.menu li:hover{
+    border-bottom: 2px solid #ecf0f1;
+    padding: 4px;
+}
+
+.submenu{
+    display: none ;
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #182c61;
+    height: auto;
+    border-radius: 4px;
+} 
+
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li{
+    display: block;
+    padding: 4px;
+}
+
+.submenu li a{
+    color: #182c61;
+}
 .brands-list img {
     height: 24px;
+}
+
+.produtos img {
+    width: 200px;
+    height: auto;
+    aspect-ratio: 2/2;
+    object-fit: contain;
 }
 
 .brands-list li {
