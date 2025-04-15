@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 header,
-section h2,
-section h3,
-form button {
+.container {
     font-family: "Bungee", serif;
     font-weight: normal;
 }
@@ -85,12 +89,77 @@ section .container {
 .submenu li a{
     color: #182c61;
 }
+
+h2{
+    font-family: Bungee;
+    color: #182c61;
+    margin:16px 0;
+    border-bottom: 2px solid #3564ca;
+}
+
+h3{
+    color: #182c61;
+    margin-bottom:4px;
+}
+
+p, strong{
+    font-family: Roboto;
+    color: #182c61;;
+}
+
+section{
+    margin-bottom: 24px;
+}
+
+section h1{
+    display: flex;
+    justify-content: center;
+    color: #ecf0f1;
+    background-color: #182c61;
+    border-radius: 8px;
+    font-size: 32px;
+    margin: 24px 0;
+}
+
+.sobre, .contact{
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    column-gap: 1%;
+}
+
+.sobre p{
+    margin-bottom: 8px;
+}
+
+#console, #jogos{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1%;
+}
+
+.produto .button{
+    display: flex;
+    justify-content: center;
+    width:50%;
+    padding: 8px 4px;
+    margin: 4px 0;
+    border-radius: 4px;
+    color: #ecf0f1;
+    background-color: #182c61;
+}
+
+.produto .button:hover{
+    background-color: #3564ca;
+    border: #cccc 2px solid;
+    cursor: pointer;
+}
+
 .brands-list img {
     height: 24px;
 }
 
 .produtos img {
-    width: 200px;
+    width: 300px;
     height: auto;
     aspect-ratio: 2/2;
     object-fit: contain;
@@ -184,4 +253,123 @@ footer {
     background-color: #182c61;
     color: #ecf0f1;
     padding: 16px 0;
+}
+
+@media screen and (max-width: 640px){
+    .container, .contato{
+        display: block;
+        width: 90%;
+    }
+
+    h1, h2{
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: 1.2em;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    header .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu li a{
+        padding: 0;
+    }
+
+    .btn-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4px 0;
+    }
+
+    .btn-menu button{
+        display: flex;
+        width: auto;
+        color: #182c61;
+    }
+
+    .menu li{
+        display: block;
+        margin: 0;
+    }
+
+    .submenu li{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #console, #jogos{
+        display: block;
+    }
+
+    .produto{
+        margin-bottom: 16px;
+    }
+    
+    .contato form input, textarea, button{
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .contato form button{
+        padding: 8px;
+    }
+
+    .contato p{
+        margin-bottom: 8px;
+    }
+} 
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    header .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul .submenu {
+        margin-top: 8px;
+    }
+
+    ul .submenu li a{
+        padding: 8px;
+    }
+
+    .container{
+        display: block;
+        width: 90%;
+    }
+    .btn-menu{
+        display:none;
+    }
+
+    #console, #jogos{
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+    }
+
+    .contato form input,textarea, button{
+        display: block;
+        margin-bottom: 8px;
+        padding: 8px;
+        width: 80%;
+        border: 1px solid #3564ca
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .btn-menu{
+        display:none;
+    }
 }
