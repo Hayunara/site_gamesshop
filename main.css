@@ -5,13 +5,12 @@
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
-header,
-.container {
+header, .container {
     font-family: "Bungee", serif;
     font-weight: normal;
 }
@@ -35,12 +34,6 @@ header nav li {
 header nav li a {
     color: #ecf0f1;
     text-decoration: none;
-}
-
-.container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
 }
 
 header .container,
@@ -121,13 +114,7 @@ section h1{
     margin: 24px 0;
 }
 
-.sobre, .contact{
-    display: grid;
-    grid-template-columns: repeat(2, 49%);
-    column-gap: 1%;
-}
-
-.sobre p{
+#sobre p{
     margin-bottom: 8px;
 }
 
@@ -146,6 +133,11 @@ section h1{
     border-radius: 4px;
     color: #ecf0f1;
     background-color: #182c61;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
 }
 
 .produto .button:hover{
@@ -176,14 +168,11 @@ section .container {
 
 section {
     padding: 24px 0;
+    color: #182c61;
 }
 
 section h2 {
     margin-bottom: 16px;
-}
-
-section {
-    color: #182c61;
 }
 
 section p {
@@ -207,7 +196,7 @@ section p {
     text-decoration: none;
 }
 
-#contact .container {
+#contato .container {
     display: block;
 }
 
@@ -256,7 +245,7 @@ footer {
 }
 
 @media screen and (max-width: 640px){
-    .container, .contato{
+    .container, #contato {
         display: block;
         width: 90%;
     }
@@ -317,16 +306,16 @@ footer {
         margin-bottom: 16px;
     }
     
-    .contato form input, textarea, button{
+    #contato form input, textarea, button{
         width: 100%;
         margin-bottom: 4px;
     }
 
-    .contato form button{
+    #contato form button{
         padding: 8px;
     }
 
-    .contato p{
+    #contato p{
         margin-bottom: 8px;
     }
 } 
@@ -359,7 +348,7 @@ footer {
         column-gap: 1%;
     }
 
-    .contato form input,textarea, button{
+    #contato form input,textarea, button{
         display: block;
         margin-bottom: 8px;
         padding: 8px;
