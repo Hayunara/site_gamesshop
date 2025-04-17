@@ -238,13 +238,45 @@ input:focus, textarea:focus {
     outline-color: #182c61;
 }
 
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
+}
+
+.contact-block ul.social-links {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones sociais */
+    gap: 8px; /* Espaço entre os ícones */
+    margin-top: 8px;
+}
+
+.contact-block p {
+    margin-top: 8px;
+    max-width: 90%; /* Evita overflow em telas pequenas */
+}
+
 footer {
     background-color: #182c61;
     color: #ecf0f1;
     padding: 16px 0;
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 767px){
+footer p {
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-size: 0.9em; /* Ajuste o tamanho para mobile */
+    color: #ecf0f1;
+}
+
+@media screen and (max-width: 767px) {
     .container {
         display: block;
         width: 90%;
@@ -259,6 +291,51 @@ footer {
         display: block;    
     }
 
+    #contato .container {
+        display: block;
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os blocos à esquerda */
+    }
+
+    .contact-block {
+        margin-bottom: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        text-align: left; /* Texto alinhado à esquerda */
+    }
+
+    .contact-block ul.social-links {
+        display: flex;
+        justify-content: flex-start; /* Ícones sociais à esquerda */
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .contact-block p {
+        font-size: 0.8em;
+        max-width: 90%;
+    }
+
+    footer {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center; /* Reforça centralização no mobile */
+    }
+    footer p {
+        font-size: 0.8em; /* Tamanho menor para mobile */
+        max-width: 90%; /* Evita overflow */
+    }
+
     h1, h2{
         font-size: 1.5em;
     }
@@ -269,6 +346,13 @@ footer {
 
     p{
         font-size: 0.8em;
+    }
+
+    .contact-block h3 {
+        border-bottom: 2px solid #3564ca;
+        padding-bottom: 4px;
+        font-size: 1.2em; /* Mantém o tamanho atual */
+        width: 100%;
     }
 
     header .container{
@@ -330,39 +414,113 @@ footer {
 } 
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    header .container{
+    .container {
+        width: 90%; /* Mantém a largura responsiva */
+        max-width: 960px; /* Limita a largura para tablets */
+        margin: 0 auto;
+    }
+
+    header .container {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .btn-menu {
+        display: none; /* Botão de menu já escondido no tablet */
     }
 
     ul .submenu {
         margin-top: 8px;
     }
 
-    ul .submenu li a{
+    ul .submenu li a {
         padding: 8px;
     }
 
-    .container{
-        display: block;
-        width: 90%;
-    }
-    .btn-menu{
-        display:none;
+    /* Seção Sobre */
+    #sobre .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #console, #jogos{
+    .store-front {
+        width: 100%;
+        max-width: 800px; /* Reduz a imagem da loja */
+        margin-bottom: 16px;
+        margin-left: 35px;
+    }
+
+    /* Seção Produtos */
+    #console, #jogos {
         display: grid;
-        grid-template-columns: repeat(2, 49%);
+        grid-template-columns: repeat(2, 49%); /* Mantém o grid de 2 colunas */
         column-gap: 1%;
+        row-gap: 16px;
     }
 
-    #contato form input,textarea, button{
-        display: block;
+    .produtos img {
+        width: 100%;
+        max-width: 250px; /* Ajusta imagens dos produtos */
+        height: auto;
+    }
+
+    /* Seção Contato */
+    #contato .container {
+        display: block; /* Organiza em coluna para melhor legibilidade */
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column; /* Empilha os blocos verticalmente */
+        align-items: flex-start; /* Alinha à esquerda, como no mobile */
+        gap: 16px;
+    }
+
+    .contact-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .contact-block h3 {
+        border-bottom: 2px solid #3564ca; /* Mantém a linha azul */
+        padding-bottom: 4px;
+        width: 100%;
+    }
+
+    .contact-block ul.social-links {
+        display: flex;
+        justify-content: flex-start; /* Ícones sociais à esquerda */
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .contact-block p {
+        font-size: 0.9em;
+        max-width: 90%;
+    }
+
+    #contato form input, textarea, button {
+        width: 100%; /* Ajusta o formulário para ocupar toda a largura */
         margin-bottom: 8px;
         padding: 8px;
-        width: 80%;
-        border: 1px solid #3564ca
+        border: 1px solid #3564ca;
+    }
+
+    h1, h2 {
+        font-size: 1.8em; /* Ajusta tamanhos de fonte */
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.9em;
     }
 }
 
