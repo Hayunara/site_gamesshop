@@ -284,7 +284,7 @@ footer p {
     color: #ecf0f1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 640px) {
     .container {
         display: block;
         width: 90%;
@@ -471,7 +471,7 @@ footer p {
     }
 } 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
         width: 90%; /* Mantém a largura responsiva */
         max-width: 960px; /* Limita a largura para tablets */
