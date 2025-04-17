@@ -83,6 +83,14 @@ section .container {
     color: #182c61;
 }
 
+.submenu-toggle {
+    color: #ecf0f1;
+    background: none;
+    border: none;
+    font-family: "Bungee", serif; /* Fonte Bungee para o botão Produtos */
+    font-size: 1em;
+}
+
 h2{
     font-family: Bungee;
     color: #182c61;
@@ -283,6 +291,11 @@ footer p {
         overflow-x: hidden;
     }
 
+    header .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .store-front {
         width: 340px;
     }
@@ -355,17 +368,65 @@ footer p {
         width: 100%;
     }
 
-    header .container{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .menu{
         display: none;
+        width: 100%;
     }
 
-    .menu li a{
-        padding: 0;
+    .menu.active {
+        display: block;
+    }
+
+    .menu li{
+        display: block;
+        margin: 8px 0;
+    }
+
+    .menu li a {
+        padding: 8px;
+        display: block;
+        color: #ecf0f1;
+        text-decoration: none;
+        font-family: "Bungee", serif;
+        font-size: 1em;
+    }
+
+    .submenu-toggle {
+        padding: 8px;
+        display: block;
+        color: #ecf0f1;
+        background: none;
+        border: none;
+        font-family: "Bungee", serif; /* Fonte Bungee para o botão Produtos */
+        font-size: 1em;
+        cursor: pointer;
+        text-align: left;
+        width: 100%;
+    }
+
+    .submenu {
+        display: none; /* Escondido por padrão */
+        position: relative; /* Posicionamento relativo para mobile */
+        background-color: #f5f5f5; /* Fundo claro para contraste */
+        padding-left: 16px; /* Indenta itens do submenu */
+        overflow: hidden;
+    }
+
+    .submenu.active {
+        display: block; /* Mostrado quando ativado */
+    }
+
+    .submenu li {
+        display: block;
+        margin: 4px 0;
+    }
+
+    .submenu li a {
+        color: #182c61;
+        font-family: "Bungee", serif;
+        padding: 8px;
+        display: block;
+        text-decoration: none;
     }
 
     .btn-menu{
@@ -379,16 +440,13 @@ footer p {
         display: flex;
         width: auto;
         color: #182c61;
-    }
-
-    .menu li{
-        display: block;
+        padding: 8px 16px;
+        border: none;
+        background-color: #ecf0f1;
+        font-size: 1em;
         margin: 0;
-    }
-
-    .submenu li{
-        display: block;
-        flex-direction: column;
+        cursor: pointer;
+        font-family: "Bungee", serif;
     }
 
     #console, #jogos{
@@ -427,6 +485,18 @@ footer p {
 
     .btn-menu {
         display: none; /* Botão de menu já escondido no tablet */
+    }
+
+    
+
+    .submenu-toggle {
+        color: #ecf0f1;
+        background: none;
+        border: none;
+        font-family: "Bungee", serif; /* Fonte Bungee para o botão Produtos */
+        cursor: pointer;
+        text-align: left;
+        font-size: 1em;
     }
 
     ul .submenu {
